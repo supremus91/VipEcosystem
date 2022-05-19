@@ -43,6 +43,8 @@ Public Class SW_interface
 
 
     Private Sub SW_interface_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: questa riga di codice carica i dati nella tabella 'DataBaseSWDataSet12.TipoPala'. È possibile spostarla o rimuoverla se necessario.
+        Me.TipoPalaTableAdapter.Fill(Me.DataBaseSWDataSet12.TipoPala)
         'TODO: questa riga di codice carica i dati nella tabella 'DataBaseSWDataSet1.Angolo'. È possibile spostarla o rimuoverla se necessario.
         Me.AngoloTableAdapter.Fill(Me.DataBaseSWDataSet1.Angolo)
         'TODO: questa riga di codice carica i dati nella tabella 'DataBaseSWDataSet1.Diametri'. È possibile spostarla o rimuoverla se necessario.
@@ -109,6 +111,14 @@ Public Class SW_interface
 
     End Sub
 
+
+    Private Sub cbx_pala_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_pala.SelectedIndexChanged
+
+        Dim Tipo_ventolaDR As DataRowView = cbx_pala.SelectedItem
+
+        TipoPala = Tipo_ventolaDR(1)(0)
+
+    End Sub
 
     Private Sub Serie_motore_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_motore.SelectedIndexChanged
 
@@ -222,10 +232,10 @@ Public Class SW_interface
 
         If cbx_diametro.SelectedIndex <> -1 And cbx_angolo.SelectedIndex <> -1 Then
             Pan3.Visible = True
-            btn_creaSW.Visible = True
+            'btn_creaSW.Visible = True
         Else
             Pan3.Visible = False
-            btn_creaSW.Visible = False
+            'btn_creaSW.Visible = False
         End If
 
     End Sub
@@ -243,10 +253,10 @@ Public Class SW_interface
 
         If cbx_diametro.SelectedIndex <> -1 And cbx_angolo.SelectedIndex <> -1 Then
             Pan3.Visible = True
-            btn_creaSW.Visible = True
+            'btn_creaSW.Visible = True
         Else
             Pan3.Visible = False
-            btn_creaSW.Visible = False
+            'btn_creaSW.Visible = False
         End If
 
     End Sub
@@ -356,7 +366,7 @@ Public Class SW_interface
 
 
 
-    Private Sub btn_creaSW_Click(sender As Object, e As EventArgs) Handles btn_creaSW.Click
+    Private Sub btn_creaSW_Click(sender As Object, e As EventArgs)
         generate_excel()
     End Sub
 
@@ -403,12 +413,13 @@ Public Class SW_interface
         Dim SwOpen As SwOpenFile = New SwOpenFile()
 
         Try
-            SwOpen.Main(Serie_motore, Serie_ventola, Diam_SW, Angolo_SW, Config_ventilatore, Profilo_ventola, Npale_ventola, Flusso, Pan3)
+            SwOpen.Main(Serie_motore, Serie_ventola, Diam_SW, Angolo_SW, Config_ventilatore, TipoPala, Profilo_ventola, Npale_ventola, Flusso, Pan3)
         Catch ex As Exception
 
         End Try
 
 
     End Sub
+
 
 End Class

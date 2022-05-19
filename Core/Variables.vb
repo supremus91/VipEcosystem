@@ -899,6 +899,7 @@ Module Variables
     Public objExcel_SW As Object
 
     Public Serie_ventola As String
+    Public TipoPala As String = "0"
     Public Profilo_ventola As String
     Public Npale_ventola As String
     Public Serie_motore As String

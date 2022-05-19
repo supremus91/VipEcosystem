@@ -34,7 +34,7 @@ Public Class SwOpenFile
 
     Public swApp As SldWorks = CreateObject("SldWorks.Application")
 
-    Public Sub Main(Motore As String, Ventola As String, Diametro As String, Calettamento As String, Configurazione As String, TipoVentola As String, NumeroPale As String, Flusso As String, ByRef pan As Guna.UI2.WinForms.Guna2Panel)
+    Public Sub Main(Motore As String, Ventola As String, Diametro As String, Calettamento As String, Configurazione As String, TipoPala As String, TipoVentola As String, NumeroPale As String, Flusso As String, ByRef pan As Guna.UI2.WinForms.Guna2Panel)
 
         Lettura_RefExcel1()
 
@@ -118,7 +118,7 @@ Public Class SwOpenFile
             'status = docDocExt.SelectByID2("063 M@RR _._._ -_._-_._-[M]-_._._7_-A.SLDASM", "CONFIGURATIONS", 0, 0, 0, False, 0, Nothing, 0)
             status = docDocExt.SelectByID2(diam_SW_star & " M@" & CodiceVentilatore1 & ".SLDASM", "CONFIGURATIONS", 0, 0, 0, False, 0, Nothing, 0)
             doc.ShowConfiguration2(diam_SW_star & " " & Configurazione)
-            doc.Extension.SelectByID2("PALE PER " & Ventola & NumeroPale & " D" & SW_Raggera & "-" & SW_Code & "@" & CodiceVentilatore1, "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+            doc.Extension.SelectByID2("PALE PER " & TipoPala & " " & Ventola & NumeroPale & " D" & SW_Raggera & "-" & SW_Code & "@" & CodiceVentilatore1, "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
 
 
             '' Select a sketch and hide it

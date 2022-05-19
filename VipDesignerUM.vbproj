@@ -37,7 +37,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>StatDesigner.htm</WebPage>
-    <ApplicationRevision>309</ApplicationRevision>
+    <ApplicationRevision>311</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -310,6 +310,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBaseSWDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet12.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet12.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataBaseSWDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -772,6 +777,17 @@
     <None Include="DataBaseSWDataSet11.xss">
       <DependentUpon>DataBaseSWDataSet11.xsd</DependentUpon>
     </None>
+    <None Include="DataBaseSWDataSet12.xsc">
+      <DependentUpon>DataBaseSWDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet12.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet12.xss">
+      <DependentUpon>DataBaseSWDataSet12.xsd</DependentUpon>
+    </None>
     <None Include="DataBaseSWDataSet2.xsc">
       <DependentUpon>DataBaseSWDataSet2.xsd</DependentUpon>
     </None>
@@ -1002,6 +1018,9 @@
     <None Include="Resources\plus_blue1.png" />
     <None Include="Resources\sw.png" />
     <None Include="Resources\sw1.png" />
+    <Content Include="DataBaseSW.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Regole_mod.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
