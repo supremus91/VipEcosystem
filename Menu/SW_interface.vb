@@ -114,9 +114,18 @@ Public Class SW_interface
 
     Private Sub cbx_pala_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_pala.SelectedIndexChanged
 
-        Dim Tipo_ventolaDR As DataRowView = cbx_pala.SelectedItem
+        Try
 
-        TipoPala = Tipo_ventolaDR(1)(0)
+            Dim Tipo_ventolaDR As DataRowView = cbx_pala.SelectedItem
+
+            TipoPala = Tipo_ventolaDR(1)(0)
+
+        Catch ex As Exception
+
+        End Try
+
+
+
 
     End Sub
 

@@ -37,7 +37,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>StatDesigner.htm</WebPage>
-    <ApplicationRevision>311</ApplicationRevision>
+    <ApplicationRevision>314</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -315,6 +315,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBaseSWDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet13.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataBaseSWDataSet2.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -787,6 +792,17 @@
     </None>
     <None Include="DataBaseSWDataSet12.xss">
       <DependentUpon>DataBaseSWDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet13.xsc">
+      <DependentUpon>DataBaseSWDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet13.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet13.xss">
+      <DependentUpon>DataBaseSWDataSet13.xsd</DependentUpon>
     </None>
     <None Include="DataBaseSWDataSet2.xsc">
       <DependentUpon>DataBaseSWDataSet2.xsd</DependentUpon>
@@ -1270,6 +1286,18 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DataBaseSW.accdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>DataFile</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets" Condition="Exists('packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets')" />
