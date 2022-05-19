@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52E2D364-19EC-4B30-95B3-205113A6EDE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VipDesignerUM.My.MyApplication</StartupObject>
+    <RootNamespace>VipDesignerUM</RootNamespace>
+    <AssemblyName>VipDesignerUM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>ftp://vipfan.ddns.net/StatDesigner/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://vipfan.ddns.net/StatDesigner/</InstallUrl>
+    <UpdateUrl>http://vipfan.ddns.net/StatDesigner/</UpdateUrl>
+    <ErrorReportUrl>http://www.vipblade.it.myapplication</ErrorReportUrl>
+    <ProductName>StatDesigner</ProductName>
+    <PublisherName>Vip Air Empowerment S.r.l.</PublisherName>
+    <SuiteName>StatDesigner</SuiteName>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>StatDesigner.htm</WebPage>
+    <ApplicationRevision>309</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VipDesignerUM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VipDesignerUM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>VipStat.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5B8005166E3894F556FDA143822807063C9C463E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VipDesignerUM_4_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EPDM.Interop.epdm, Version=5.22.0.0, Culture=neutral, PublicKeyToken=0625a0c4bb5de148, processorArchitecture=MSIL">
+      <HintPath>packages\Solidworks.EPDM.Interop.19.4.0\lib\net20\EPDM.Interop.epdm.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EPDM.Interop.EPDMResultCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0625a0c4bb5de148, processorArchitecture=MSIL">
+      <HintPath>packages\Solidworks.EPDM.Interop.19.4.0\lib\net20\EPDM.Interop.EPDMResultCode.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SolidWorks.Interop.sldworks, Version=28.1.0.74, Culture=neutral, PublicKeyToken=7c4797c3e4eeac03, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.SolidWorks.Interops.0.3.0\lib\net40\SolidWorks.Interop.sldworks.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swcommands, Version=27.4.0.72, Culture=neutral, PublicKeyToken=0fda92720ba7919f, processorArchitecture=MSIL">
+      <HintPath>packages\Solidworks.Interop.Basic.19.4.0\lib\net20\SolidWorks.Interop.swcommands.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swconst, Version=28.1.0.74, Culture=neutral, PublicKeyToken=19f43e188e4269d8, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.SolidWorks.Interops.0.3.0\lib\net40\SolidWorks.Interop.swconst.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.swpublished, Version=28.1.0.74, Culture=neutral, PublicKeyToken=89a97bdc5284e6d8, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.SolidWorks.Interops.0.3.0\lib\net40\SolidWorks.Interop.swpublished.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xarial.XCad, Version=0.7.12.0, Culture=neutral, PublicKeyToken=60dcaf351d4060db, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.0.7.12\lib\net461\Xarial.XCad.dll</HintPath>
+    </Reference>
+    <Reference Include="Xarial.XCad.SolidWorks, Version=0.7.12.0, Culture=neutral, PublicKeyToken=60dcaf351d4060db, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.SolidWorks.0.7.12\lib\net461\Xarial.XCad.SolidWorks.dll</HintPath>
+    </Reference>
+    <Reference Include="Xarial.XCad.Toolkit, Version=0.7.12.0, Culture=neutral, PublicKeyToken=60dcaf351d4060db, processorArchitecture=MSIL">
+      <HintPath>packages\Xarial.XCad.Toolkit.0.7.12\lib\net461\Xarial.XCad.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Codifica_DescrizioneDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Codifica_DescrizioneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Codifica_DescrizioneDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Codifica_DescrizioneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Archivio\ERP.vb" />
+    <Compile Include="Core\Archivio\MandaMailErrore.vb" />
+    <Compile Include="Core\Catalogo\Aggiungi_Catalogo.vb" />
+    <Compile Include="Core\Catalogo\Elimina_riga_catalogo.vb" />
+    <Compile Include="Core\Catalogo\Importa_Catalogo.vb" />
+    <Compile Include="Core\Catalogo\Numero_colonne_Catalogo.vb" />
+    <Compile Include="Core\Datasheet\calcolo_coeff_parabola.vb" />
+    <Compile Include="Core\Datasheet\Database\Aggiungi_DS.vb" />
+    <Compile Include="Core\Datasheet\Database\Cancella_rigaDS.vb" />
+    <Compile Include="Core\Datasheet\Database\Importa_Ambiente.vb" />
+    <Compile Include="Core\Datasheet\Database\Importa_Archivio_DS.vb" />
+    <Compile Include="Core\Datasheet\Database\Importa_Configurazioni.vb" />
+    <Compile Include="Core\Datasheet\Database\Leggi_riga_PJ.vb" />
+    <Compile Include="Core\Datasheet\Database\Modifica_check_sito.vb" />
+    <Compile Include="Core\Datasheet\Database\Modifica_rigaDS.vb" />
+    <Compile Include="Core\Datasheet\Database\Numero_colonne_DS.vb" />
+    <Compile Include="Core\Datasheet\Database\Traduttore_PJ_DataBase.vb" />
+    <Compile Include="Core\Datasheet\Nome_fan_corretto.vb" />
+    <Compile Include="Core\Datasheet\Print\Calcolo_pti_parabola.vb" />
+    <Compile Include="Core\Datasheet\Print\Footer.vb" />
+    <Compile Include="Core\Datasheet\Print\Header.vb" />
+    <Compile Include="Core\Datasheet\Print\PaginaA.vb" />
+    <Compile Include="Core\Datasheet\Print\PJ.vb" />
+    <Compile Include="Core\Datasheet\Print\Tmax_correction.vb" />
+    <Compile Include="Core\Datasheet\Ricerca_tabelle.vb" />
+    <Compile Include="Core\Datasheet\Database\Traduttore_DB_amb.vb" />
+    <Compile Include="Core\Datasheet\Database\Traduttore_DB_config.vb" />
+    <Compile Include="Core\Disegni\Copia_Disegni.vb" />
+    <Compile Include="Core\Gestione All DataBase Vip\PJ_DataBase\Aggiungi_PJ_DataBase.vb" />
+    <Compile Include="Core\Gestione All DataBase Vip\PJ_DataBase\Elimina_riga_PJ_DataBase.vb" />
+    <Compile Include="Core\Gestione All DataBase Vip\PJ_DataBase\Importa_PJ_DataBase.vb" />
+    <Compile Include="Core\Gestione All DataBase Vip\PJ_DataBase\Modifica_riga_PJ_DataBase.vb" />
+    <Compile Include="Core\Gestione utenti\Accetta_rifiuta.vb" />
+    <Compile Include="Core\Gestione utenti\Conta_statiPJ.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\AggiungiPJ.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\AggiungiRev.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Aggiungi_Nota.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Cancella_nota.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\ConnStateUser.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\ConnStateVD.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Crea_DB_tabelle.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\lettrua_progetto.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Lettura_TabDB.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Lettura_note.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Lettura_riga.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\ModCliente.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Modifica_nota.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Modifica_riga.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Numero_colonne.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\Numero_righe.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\Access\SchemaDatabase.vb" />
+    <Compile Include="Core\Gestione utenti\Download_all_data.vb" />
+    <Compile Include="Core\Gestione utenti\Find_if_was_target.vb" />
+    <Compile Include="Core\Gestione utenti\Genera_Segnale.vb" />
+    <Compile Include="Core\Gestione utenti\Storico\Save_mese.vb" />
+    <Compile Include="Core\Gestione utenti\Target.vb" />
+    <Compile Include="Core\Gestione utenti\Ufficio tec stat\Stat_UT_user.vb" />
+    <Compile Include="Core\Gestione utenti\Ufficio tec stat\Uff_tec_count.vb" />
+    <Compile Include="Core\Progettazione\Funzioni DB\SQL\Select_1Filtro.vb" />
+    <Compile Include="Core\Progettazione\Generale\funzione_cbx.vb" />
+    <Compile Include="Core\Progettazione\Generale\funzione_sblocco.vb" />
+    <Compile Include="Core\Progettazione\Generale\ricerca_valore_tab.vb" />
+    <Compile Include="Core\Progettazione\Generale\Servizio_mailing.vb" />
+    <Compile Include="Core\SQL_SERVER\SQLSERVER_Add_Data.vb" />
+    <Compile Include="Core\SQL_SERVER\SQLSERVER_context.vb" />
+    <Compile Include="Core\SQL_SERVER\SQLSERVER_Delete_allData.vb" />
+    <Compile Include="Core\Sviluppo\Database\Aggiungi_sviluppo.vb" />
+    <Compile Include="Core\Sviluppo\Database\convalida_sviluppatore.vb" />
+    <Compile Include="Core\Sviluppo\Database\convalida_sviluppo_user.vb" />
+    <Compile Include="Core\Sviluppo\Database\Elimina_riga_sviluppo.vb" />
+    <Compile Include="Core\Sviluppo\Database\Importa_Sviluppo.vb" />
+    <Compile Include="Core\Sviluppo\Database\Modifica_sviluppo.vb" />
+    <Compile Include="Core\Sviluppo\Database\Numero_colonne_Sviluppo.vb" />
+    <Compile Include="Core\SW\classi\LeggiSwDbRaggera.vb" />
+    <Compile Include="Core\SW\Lettura_RefExcel.vb" />
+    <Compile Include="Core\SW\SwOpenFile.vb" />
+    <Compile Include="Core\Variables.vb" />
+    <Compile Include="DataBaseSWDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet10.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet11.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseSWDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBaseSWDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasheet1.Designer.vb">
+      <DependentUpon>Datasheet1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datasheet1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\All_project_user.Designer.vb">
+      <DependentUpon>All_project_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\All_project_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ArchivioDS.Designer.vb">
+      <DependentUpon>ArchivioDS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ArchivioDS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Catalogo.Designer.vb">
+      <DependentUpon>Catalogo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Catalogo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Datasheet.Designer.vb">
+      <DependentUpon>Datasheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Datasheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DatasheetMenu.Designer.vb">
+      <DependentUpon>DatasheetMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DatasheetMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DB_Archivio.Designer.vb">
+      <DependentUpon>DB_Archivio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DB_Archivio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FolderViewer.Designer.vb">
+      <DependentUpon>FolderViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FolderViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Panel_Note.Designer.vb">
+      <DependentUpon>Panel_Note.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Panel_Note.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Pannello_immagine.Designer.vb">
+      <DependentUpon>Pannello_immagine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Pannello_immagine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Progettazioni.Designer.vb">
+      <DependentUpon>Progettazioni.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Progettazioni.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\PanUfficio.Designer.vb">
+      <DependentUpon>PanUfficio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\PanUfficio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormNotifications.Designer.vb">
+      <DependentUpon>FormNotifications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormNotifications.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\PanLoad.Designer.vb">
+      <DependentUpon>PanLoad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\PanLoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\PanLista.Designer.vb">
+      <DependentUpon>PanLista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\PanLista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\PanResume.Designer.vb">
+      <DependentUpon>PanResume.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\PanResume.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormSettings.Designer.vb">
+      <DependentUpon>FormSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\AccessoriesMenu.Designer.vb">
+      <DependentUpon>AccessoriesMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\AccessoriesMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\ArchivioMenu.Designer.vb">
+      <DependentUpon>ArchivioMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ArchivioMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\CableMenu.Designer.vb">
+      <DependentUpon>CableMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\CableMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\CertificateMenu.Designer.vb">
+      <DependentUpon>CertificateMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\CertificateMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DataBaseMenu.Designer.vb">
+      <DependentUpon>DataBaseMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\DataBaseMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\Prezzo.Designer.vb">
+      <DependentUpon>Prezzo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\Prezzo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\PrezzoMenu.Designer.vb">
+      <DependentUpon>PrezzoMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SottoMenu\PrezzoMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\warning_archivio_DS.Designer.vb">
+      <DependentUpon>warning_archivio_DS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\warning_archivio_DS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SW_interface.Designer.vb">
+      <DependentUpon>SW_interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SW_interface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\VideoTutorialMenu.Designer.vb">
+      <DependentUpon>VideoTutorialMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\VideoTutorialMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Warning_DBPJ.Designer.vb">
+      <DependentUpon>Warning_DBPJ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Warning_DBPJ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Warning_generaleOK.Designer.vb">
+      <DependentUpon>Warning_generaleOK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Warning_generaleOK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Warning_valutazione.Designer.vb">
+      <DependentUpon>Warning_valutazione.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Warning_valutazione.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Special Settings.Designer.vb">
+      <DependentUpon>Special Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Special Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Sviluppi.Designer.vb">
+      <DependentUpon>Sviluppi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Sviluppi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Warning.Designer.vb">
+      <DependentUpon>Warning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Warning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Warning_copy_folder.Designer.vb">
+      <DependentUpon>Warning_copy_folder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Warning_copy_folder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewPJDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewPJDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Regole_modDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Regole_modDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Datasheet1.resx">
+      <DependentUpon>Datasheet1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\All_project_user.resx">
+      <DependentUpon>All_project_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ArchivioDS.resx">
+      <DependentUpon>ArchivioDS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\ArchivioMenu.resx">
+      <DependentUpon>ArchivioMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Catalogo.resx">
+      <DependentUpon>Catalogo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DataBaseMenu.resx">
+      <DependentUpon>DataBaseMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Datasheet.resx">
+      <DependentUpon>Datasheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DatasheetMenu.resx">
+      <DependentUpon>DatasheetMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DB_Archivio.resx">
+      <DependentUpon>DB_Archivio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FolderViewer.resx">
+      <DependentUpon>FolderViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormNotifications.resx">
+      <DependentUpon>FormNotifications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormSettings.resx">
+      <DependentUpon>FormSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Panel_Note.resx">
+      <DependentUpon>Panel_Note.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\PanLoad.resx">
+      <DependentUpon>PanLoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Pannello_immagine.resx">
+      <DependentUpon>Pannello_immagine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Progettazioni.resx">
+      <DependentUpon>Progettazioni.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\PanLista.resx">
+      <DependentUpon>PanLista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\PanResume.resx">
+      <DependentUpon>PanResume.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\PanUfficio.resx">
+      <DependentUpon>PanUfficio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SottoMenu\AccessoriesMenu.resx">
+      <DependentUpon>AccessoriesMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SottoMenu\CableMenu.resx">
+      <DependentUpon>CableMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SottoMenu\CertificateMenu.resx">
+      <DependentUpon>CertificateMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SottoMenu\Prezzo.resx">
+      <DependentUpon>Prezzo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SottoMenu\PrezzoMenu.resx">
+      <DependentUpon>PrezzoMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Special Settings.resx">
+      <DependentUpon>Special Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Sviluppi.resx">
+      <DependentUpon>Sviluppi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SW_interface.resx">
+      <DependentUpon>SW_interface.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\VideoTutorialMenu.resx">
+      <DependentUpon>VideoTutorialMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Warning.resx">
+      <DependentUpon>Warning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\warning_archivio_DS.resx">
+      <DependentUpon>warning_archivio_DS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Warning_copy_folder.resx">
+      <DependentUpon>Warning_copy_folder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Warning_DBPJ.resx">
+      <DependentUpon>Warning_DBPJ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Warning_generaleOK.resx">
+      <DependentUpon>Warning_generaleOK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Warning_valutazione.resx">
+      <DependentUpon>Warning_valutazione.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Codifica_DescrizioneDataSet.xsc">
+      <DependentUpon>Codifica_DescrizioneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Codifica_DescrizioneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Codifica_DescrizioneDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Codifica_DescrizioneDataSet.xss">
+      <DependentUpon>Codifica_DescrizioneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Codifica_DescrizioneDataSet1.xsc">
+      <DependentUpon>Codifica_DescrizioneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Codifica_DescrizioneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Codifica_DescrizioneDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Codifica_DescrizioneDataSet1.xss">
+      <DependentUpon>Codifica_DescrizioneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet.xsc">
+      <DependentUpon>DataBaseSWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet.xss">
+      <DependentUpon>DataBaseSWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet1.xsc">
+      <DependentUpon>DataBaseSWDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet1.xss">
+      <DependentUpon>DataBaseSWDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet10.xsc">
+      <DependentUpon>DataBaseSWDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet10.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet10.xss">
+      <DependentUpon>DataBaseSWDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet11.xsc">
+      <DependentUpon>DataBaseSWDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet11.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet11.xss">
+      <DependentUpon>DataBaseSWDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet2.xsc">
+      <DependentUpon>DataBaseSWDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet2.xss">
+      <DependentUpon>DataBaseSWDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet3.xsc">
+      <DependentUpon>DataBaseSWDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet3.xss">
+      <DependentUpon>DataBaseSWDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet4.xsc">
+      <DependentUpon>DataBaseSWDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet4.xss">
+      <DependentUpon>DataBaseSWDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet5.xsc">
+      <DependentUpon>DataBaseSWDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet5.xss">
+      <DependentUpon>DataBaseSWDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet6.xsc">
+      <DependentUpon>DataBaseSWDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet6.xss">
+      <DependentUpon>DataBaseSWDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet7.xsc">
+      <DependentUpon>DataBaseSWDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet7.xss">
+      <DependentUpon>DataBaseSWDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet8.xsc">
+      <DependentUpon>DataBaseSWDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet8.xss">
+      <DependentUpon>DataBaseSWDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet9.xsc">
+      <DependentUpon>DataBaseSWDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataBaseSWDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataBaseSWDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBaseSWDataSet9.xss">
+      <DependentUpon>DataBaseSWDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="NewPJDataSet.xsc">
+      <DependentUpon>NewPJDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewPJDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewPJDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewPJDataSet.xss">
+      <DependentUpon>NewPJDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Regole_modDataSet.xsc">
+      <DependentUpon>Regole_modDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Regole_modDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Regole_modDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Regole_modDataSet.xss">
+      <DependentUpon>Regole_modDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VipDesignerUM_1_TemporaryKey.pfx" />
+    <None Include="VipDesignerUM_2_TemporaryKey.pfx" />
+    <None Include="VipDesignerUM_4_TemporaryKey.pfx" />
+    <None Include="VipDesignerUM_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VipDesigner_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\brands.css" />
+    <Content Include="Content\brands.min.css" />
+    <Content Include="Content\fontawesome-all.css" />
+    <Content Include="Content\fontawesome-all.min.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\fontawesome.min.css" />
+    <Content Include="Content\regular.css" />
+    <Content Include="Content\regular.min.css" />
+    <Content Include="Content\solid.css" />
+    <Content Include="Content\solid.min.css" />
+    <Content Include="Content\svg-with-js.css" />
+    <Content Include="Content\svg-with-js.min.css" />
+    <Content Include="Content\v4-shims.css" />
+    <Content Include="Content\v4-shims.min.css" />
+    <None Include="Resources\Ximage.png" />
+    <None Include="Resources\resize.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\min.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\main.png" />
+    <None Include="Resources\tec.png" />
+    <None Include="Resources\ldpi.png" />
+    <None Include="Resources\circle tech.png" />
+    <None Include="Resources\wp1.jpg" />
+    <None Include="Resources\circle_layout.jpg" />
+    <None Include="Resources\oval.png" />
+    <None Include="Resources\Schermata 26-03-2021 19.17.30.png" />
+    <None Include="Resources\full_moon.png" />
+    <None Include="Resources\atex.jpg" />
+    <None Include="Resources\atex_no_imm.png" />
+    <None Include="Resources\ind_app_new_no_imm.png" />
+    <None Include="Resources\off_shore_new_no_imm.png" />
+    <None Include="Resources\safe-area_no_imm.png" />
+    <None Include="Resources\ventilatore_assiale_no_imm.png" />
+    <None Include="Resources\ventilatore_radiale_no_imm.png" />
+    <None Include="Resources\on_shore_new_no_imm.png" />
+    <None Include="Resources\ventilatore_assiale.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\_MG_5030.JPG" />
+    <None Include="Resources\_MG_5060.JPG" />
+    <None Include="Resources\_MG_5015.JPG" />
+    <None Include="Resources\Paolo.JPG" />
+    <None Include="Resources\Fausto Fasolini.jpg" />
+    <None Include="Resources\Lorenzo.png" />
+    <None Include="Resources\HD_transparent_picture.png" />
+    <None Include="Resources\crown.png" />
+    <None Include="Resources\target.png" />
+    <None Include="Resources\cloud-computing.png" />
+    <None Include="Resources\list_user.png" />
+    <None Include="Resources\pie_chart.png" />
+    <None Include="Resources\Usere_stat.png" />
+    <None Include="Resources\User_Check.png" />
+    <None Include="Resources\VipDesigner_icon1.png" />
+    <None Include="Resources\VipDesigner_icon2.png" />
+    <None Include="Resources\VipDesigner_icon3.png" />
+    <None Include="Resources\Pr_parametri.png" />
+    <None Include="Resources\Pr_list.png" />
+    <None Include="Resources\Pr_man.png" />
+    <None Include="Resources\plus_small.png" />
+    <None Include="Resources\Plus2_minus.png" />
+    <None Include="Resources\Search_small.png" />
+    <None Include="Resources\Massimiliano 2.JPG" />
+    <None Include="Resources\atex_bw.jpg" />
+    <None Include="Resources\safe-area.png" />
+    <None Include="Resources\non_hazard_bw.jpg" />
+    <None Include="Resources\Intro5.mp4" />
+    <None Include="Resources\load.gif" />
+    <None Include="Resources\save.jpg" />
+    <None Include="Resources\24x24.png" />
+    <None Include="Resources\Question.png" />
+    <None Include="Resources\Question2.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\warning1.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\resize1.png" />
+    <None Include="Resources\minus1.png" />
+    <None Include="Resources\save_success.gif" />
+    <None Include="Resources\smile.gif" />
+    <None Include="Resources\smile_gif.gif" />
+    <None Include="Resources\folder1.png" />
+    <None Include="Resources\plus_blue1.png" />
+    <None Include="Resources\sw.png" />
+    <None Include="Resources\sw1.png" />
+    <Content Include="Regole_mod.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\Vvv.png" />
+    <None Include="Resources\Xxx.png" />
+    <None Include="Resources\circle1.png" />
+    <None Include="Resources\16x16.png" />
+    <None Include="Resources\Wall plate.jpg" />
+    <None Include="Resources\Piedi di fissaggio Intubati.jpg" />
+    <None Include="Resources\Anti vibration supports.jpg" />
+    <None Include="Resources\Flat grill on impeller side.jpg" />
+    <None Include="Resources\Flat grill on motor side.jpg" />
+    <None Include="Resources\Mounting feet for duct fans.jpg" />
+    <None Include="Resources\Inlet mouthpiece for duct fans.jpg" />
+    <None Include="Resources\External_connection_box kit.jpg" />
+    <None Include="Resources\Elastic anti vibration joint.jpg" />
+    <None Include="Resources\Double flange fitting ring.jpg" />
+    <None Include="Resources\Counter flange.jpg" />
+    <None Include="Resources\Regulation Damper.png" />
+    <None Include="Resources\Single flange fitting ring.jpg" />
+    <None Include="Resources\cb_p1.jpeg" />
+    <None Include="Resources\cb_p2.jpg" />
+    <None Include="Resources\cb_p3.jpg" />
+    <None Include="Resources\cb_p4.jpg" />
+    <None Include="Resources\circle11.png" />
+    <None Include="Resources\circle2.png" />
+    <None Include="Resources\fan.png" />
+    <None Include="Resources\AccIcon.png" />
+    <None Include="Resources\ConnIcon.png" />
+    <None Include="Resources\CertIcon.png" />
+    <None Include="Resources\Archivio.png" />
+    <None Include="Resources\Datasheet.png" />
+    <None Include="Resources\E.jpg" />
+    <None Include="Resources\F.jpg" />
+    <None Include="Resources\G.jpg" />
+    <None Include="Resources\L.jpg" />
+    <None Include="Resources\M.jpg" />
+    <None Include="Resources\Q.jpg" />
+    <None Include="Resources\V.jpg" />
+    <None Include="Resources\PA.jpg" />
+    <None Include="Resources\PP.jpg" />
+    <None Include="Resources\W.jpg" />
+    <None Include="Resources\Z.jpg" />
+    <None Include="Resources\0.jpg" />
+    <None Include="Resources\B.jpg" />
+    <None Include="Resources\X.jpg" />
+    <None Include="Resources\J.jpg" />
+    <None Include="Resources\9.jpg" />
+    <None Include="Resources\I.jpg" />
+    <None Include="Resources\G.bmp" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\S.jpg" />
+    <None Include="Resources\U.jpg" />
+    <None Include="Resources\H.JPG" />
+    <None Include="Resources\A.bmp" />
+    <None Include="Resources\ca.jpg" />
+    <None Include="Resources\cp.jpg" />
+    <None Include="Resources\K.jpg" />
+    <None Include="Resources\VUOTA.jpg" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\microsoft-access.png" />
+    <None Include="Resources\delta_symbol_rep.PNG" />
+    <None Include="Resources\delta_symbol_rep_W.PNG" />
+    <None Include="Resources\star_symbol_rep.PNG" />
+    <None Include="Resources\star_symbol_rep_W.PNG" />
+    <None Include="Resources\CP_un.bmp" />
+    <None Include="Resources\FA_un.bmp" />
+    <None Include="Resources\GA_un.bmp" />
+    <None Include="Resources\HP_un.JPG" />
+    <None Include="Resources\IA_un.jpg" />
+    <None Include="Resources\IP_un.jpg" />
+    <None Include="Resources\JA_un.jpg" />
+    <None Include="Resources\JP_un.jpg" />
+    <None Include="Resources\NP_un.jpg" />
+    <None Include="Resources\OA_un.jpg" />
+    <None Include="Resources\OP_un.jpg" />
+    <None Include="Resources\PA_un.bmp" />
+    <None Include="Resources\PP_un.bmp" />
+    <None Include="Resources\9A_un.jpg" />
+    <None Include="Resources\9P_un.jpg" />
+    <None Include="Resources\CA_un.jpg" />
+    <None Include="Resources\IP_atex.jpg" />
+    <None Include="Resources\JA_atex.JPG" />
+    <None Include="Resources\JP_atex.JPG" />
+    <None Include="Resources\MA_atex.bmp" />
+    <None Include="Resources\PA_atex.jpg" />
+    <None Include="Resources\PP_atex.jpg" />
+    <None Include="Resources\QA_atex.jpg" />
+    <None Include="Resources\TA_atex.jpg" />
+    <None Include="Resources\TP_atex.jpg" />
+    <None Include="Resources\Z_atex.jpg" />
+    <None Include="Resources\AA_atex.jpg" />
+    <None Include="Resources\AP_atex.jpg" />
+    <None Include="Resources\BA_atex.jpg" />
+    <None Include="Resources\CA_atex.bmp" />
+    <None Include="Resources\CP_atex.jpg" />
+    <None Include="Resources\FA_atex.bmp" />
+    <None Include="Resources\GA_atex.jpg" />
+    <None Include="Resources\IA_atex.jpg" />
+    <None Include="Resources\warningDS.png" />
+    <None Include="Resources\Red_L.png" />
+    <None Include="Resources\Green_L.png" />
+    <None Include="Resources\folder2.png" />
+    <None Include="Resources\loading1.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\Copy.png" />
+    <None Include="Resources\Price.png" />
+    <None Include="Resources\dollar.png" />
+    <None Include="Resources\Saylor.jfif" />
+    <None Include="Resources\Saylor.png" />
+    <None Include="Resources\Alberto.jpg" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\fast.png" />
+    <None Include="Resources\slow.png" />
+    <None Include="Resources\waiting.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\alternative-medicine.png" />
+    <None Include="Resources\Fasuto1.PNG" />
+    <None Include="Resources\Roberto.JPG" />
+    <None Include="Resources\logo_vip.bmp" />
+    <None Include="Resources\archives.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\teams.png" />
+    <None Include="Resources\expired.png" />
+    <None Include="Resources\emergency.png" />
+    <None Include="Resources\leaf.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\Fausto1.PNG" />
+    <None Include="Resources\archive_new.png" />
+    <None Include="Resources\software.png" />
+    <None Include="Resources\leaf_smal.png" />
+    <None Include="Resources\clip.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\Star_1_5_col.png" />
+    <None Include="Resources\Star_1_col.png" />
+    <None Include="Resources\Star_2_5_col.PNG" />
+    <None Include="Resources\Star_2_col.png" />
+    <None Include="Resources\Star_3_5_col.png" />
+    <None Include="Resources\Star_3_col.png" />
+    <None Include="Resources\Star_4_5_col.png" />
+    <None Include="Resources\Star_4_col.png" />
+    <None Include="Resources\Star_5_col.png" />
+    <None Include="Resources\Star_0_5_col.png" />
+    <None Include="Resources\Star_0_5.PNG" />
+    <None Include="Resources\Star_1.PNG" />
+    <None Include="Resources\Star_1_5.PNG" />
+    <None Include="Resources\Star_2.PNG" />
+    <None Include="Resources\Star_2_5.PNG" />
+    <None Include="Resources\Star_3.PNG" />
+    <None Include="Resources\Star_3_5.PNG" />
+    <None Include="Resources\Star_4.PNG" />
+    <None Include="Resources\Star_4_5.PNG" />
+    <None Include="Resources\Star_5.PNG" />
+    <None Include="Resources\Star_5_tr.png" />
+    <None Include="Resources\Star_0_5_tr.png" />
+    <None Include="Resources\Star_1_5_tr.png" />
+    <None Include="Resources\Star_1_tr.png" />
+    <None Include="Resources\Star_2_5_tr.png" />
+    <None Include="Resources\Star_2_tr.png" />
+    <None Include="Resources\Star_3_5_tr.png" />
+    <None Include="Resources\Star_3_tr.png" />
+    <None Include="Resources\Star_4_5_tr.png" />
+    <None Include="Resources\Star_4_tr.png" />
+    <None Include="Resources\transparent1.png" />
+    <None Include="Resources\hidden.png" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\logo vip definitivo.jpg" />
+    <None Include="Resources\software_small.png" />
+    <None Include="Resources\add_photo.png" />
+    <None Include="Resources\starA.png" />
+    <None Include="Resources\Riccardo.jpeg" />
+    <None Include="Resources\I1.jpg" />
+    <None Include="Resources\J1.jpg" />
+    <None Include="Resources\R1.jpg" />
+    <None Include="Resources\S1.jpg" />
+    <None Include="Resources\U1.jpg" />
+    <None Include="Resources\01.jpg" />
+    <None Include="Resources\011.jpg" />
+    <None Include="Resources\sw_icon.jpg" />
+    <None Include="Resources\SW_icon_small.png" />
+    <None Include="Resources\SW_big.png" />
+    <None Include="Resources\Question1.png" />
+    <None Include="Resources\T_P.JPG" />
+    <None Include="Resources\T_A.JPG" />
+    <None Include="Resources\T_P.PNG" />
+    <None Include="Resources\T_A.PNG" />
+    <None Include="Resources\Conf_P_pos.jpg" />
+    <None Include="Resources\A_A.bmp" />
+    <None Include="Resources\A_P.bmp" />
+    <None Include="Resources\Y_A.JPG" />
+    <None Include="Resources\9_A.JPG" />
+    <None Include="Resources\Y_P.JPG" />
+    <None Include="Resources\9_P.JPG" />
+    <None Include="Resources\9_A.png" />
+    <None Include="Resources\Y_A.png" />
+    <None Include="Resources\Y_P.png" />
+    <None Include="Resources\9_P.png" />
+    <None Include="Resources\XLS_prova.png" />
+    <None Include="Resources\New_doc.png" />
+    <None Include="Resources\5_P_un.PNG" />
+    <None Include="Resources\5_A_un.PNG" />
+    <None Include="Resources\5_A.PNG" />
+    <None Include="Resources\5_P.PNG" />
+    <None Include="Resources\catalogo.png" />
+    <None Include="Resources\warning2.png" />
+    <Content Include="VipStat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxAXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets" Condition="Exists('packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Questo progetto fa riferimento a uno o più pacchetti NuGet che non sono presenti in questo computer. Usare lo strumento di ripristino dei pacchetti NuGet per scaricarli. Per altre informazioni, vedere http://go.microsoft.com/fwlink/?LinkID=322105. Il file mancante è {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xarial.XCad.SolidWorks.0.7.12\build\Xarial.XCad.SolidWorks.targets'))" />
+  </Target>
+</Project>
