@@ -104,8 +104,6 @@ Public Class ArchivioDS
         Ds_completi = 0
 
 
-
-
         For i As Integer = 0 To numero_DS - 1
 
             Guna2DataGridView1.Rows.Add()
@@ -140,8 +138,6 @@ Public Class ArchivioDS
 
             Next
 
-
-
             '------------------------------------------------controllo che il ventilatore sia erp---------------------------------------------
             ERP1(i)
 
@@ -154,9 +150,6 @@ Public Class ArchivioDS
             '----------------------------------------------------------------------------------------------------------------------------------
             Guna2DataGridView1.Rows(i).Cells(16).Value = My.Resources.Resources.Search_small
             Guna2DataGridView1.Rows(i).Cells(17).Value = DS_totale_dati(i, 87)
-
-
-
 
             '-----------------------------------------------------------------------------------------------------------
 

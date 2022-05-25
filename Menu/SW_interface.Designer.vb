@@ -59,6 +59,10 @@ Partial Class SW_interface
         Me.MotoreTableAdapter = New VipDesignerUM.DataBaseSWDataSetTableAdapters.MotoreTableAdapter()
         Me.VentilatoriTableAdapter = New VipDesignerUM.DataBaseSWDataSetTableAdapters.VentilatoriTableAdapter()
         Me.Pan1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.cbx_pala = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.TipoPalaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataBaseSWDataSet12 = New VipDesignerUM.DataBaseSWDataSet12()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lb_NomeFile = New System.Windows.Forms.Label()
         Me.Pan2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Pan3 = New Guna.UI2.WinForms.Guna2Panel()
@@ -82,11 +86,10 @@ Partial Class SW_interface
         Me.DataBaseSWDataSet1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AngoloTableAdapter = New VipDesignerUM.DataBaseSWDataSet1TableAdapters.AngoloTableAdapter()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.cbx_pala = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.DataBaseSWDataSet12 = New VipDesignerUM.DataBaseSWDataSet12()
-        Me.TipoPalaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TipoPalaTableAdapter = New VipDesignerUM.DataBaseSWDataSet12TableAdapters.TipoPalaTableAdapter()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Me.CbxOwnerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NewPJDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiametriBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,13 +101,15 @@ Partial Class SW_interface
         CType(Me.VentilatoriBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SerieVentolaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pan1.SuspendLayout()
+        CType(Me.TipoPalaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataBaseSWDataSet12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pan2.SuspendLayout()
         Me.Pan3.SuspendLayout()
         CType(Me.DataBaseSWDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBaseSWDataSet1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataBaseSWDataSet1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataBaseSWDataSet12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TipoPalaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel2.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button6
@@ -539,6 +544,51 @@ Partial Class SW_interface
         Me.Pan1.Size = New System.Drawing.Size(932, 146)
         Me.Pan1.TabIndex = 138
         '
+        'cbx_pala
+        '
+        Me.cbx_pala.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.cbx_pala.BorderColor = System.Drawing.Color.Black
+        Me.cbx_pala.DataSource = Me.TipoPalaBindingSource
+        Me.cbx_pala.DisplayMember = "TipoPala"
+        Me.cbx_pala.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbx_pala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbx_pala.DropDownWidth = 200
+        Me.cbx_pala.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.cbx_pala.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbx_pala.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cbx_pala.FocusedState.Parent = Me.cbx_pala
+        Me.cbx_pala.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cbx_pala.ForeColor = System.Drawing.Color.Black
+        Me.cbx_pala.HoverState.Parent = Me.cbx_pala
+        Me.cbx_pala.ItemHeight = 16
+        Me.cbx_pala.ItemsAppearance.Parent = Me.cbx_pala
+        Me.cbx_pala.Location = New System.Drawing.Point(183, 34)
+        Me.cbx_pala.Name = "cbx_pala"
+        Me.cbx_pala.ShadowDecoration.Parent = Me.cbx_pala
+        Me.cbx_pala.Size = New System.Drawing.Size(259, 22)
+        Me.cbx_pala.TabIndex = 132
+        '
+        'TipoPalaBindingSource
+        '
+        Me.TipoPalaBindingSource.DataMember = "TipoPala"
+        Me.TipoPalaBindingSource.DataSource = Me.DataBaseSWDataSet12
+        '
+        'DataBaseSWDataSet12
+        '
+        Me.DataBaseSWDataSet12.DataSetName = "DataBaseSWDataSet12"
+        Me.DataBaseSWDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Label5.Location = New System.Drawing.Point(2, 37)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 19)
+        Me.Label5.TabIndex = 133
+        Me.Label5.Text = "Tipo pala"
+        '
         'lb_NomeFile
         '
         Me.lb_NomeFile.AutoSize = True
@@ -889,54 +939,43 @@ Partial Class SW_interface
         Me.Guna2Button1.TabIndex = 142
         Me.Guna2Button1.Text = "     Open Solid Work"
         '
-        'cbx_pala
-        '
-        Me.cbx_pala.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.cbx_pala.BorderColor = System.Drawing.Color.Black
-        Me.cbx_pala.DataSource = Me.TipoPalaBindingSource
-        Me.cbx_pala.DisplayMember = "TipoPala"
-        Me.cbx_pala.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbx_pala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbx_pala.DropDownWidth = 200
-        Me.cbx_pala.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.cbx_pala.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbx_pala.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cbx_pala.FocusedState.Parent = Me.cbx_pala
-        Me.cbx_pala.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cbx_pala.ForeColor = System.Drawing.Color.Black
-        Me.cbx_pala.HoverState.Parent = Me.cbx_pala
-        Me.cbx_pala.ItemHeight = 16
-        Me.cbx_pala.ItemsAppearance.Parent = Me.cbx_pala
-        Me.cbx_pala.Location = New System.Drawing.Point(183, 34)
-        Me.cbx_pala.Name = "cbx_pala"
-        Me.cbx_pala.ShadowDecoration.Parent = Me.cbx_pala
-        Me.cbx_pala.Size = New System.Drawing.Size(259, 22)
-        Me.cbx_pala.TabIndex = 132
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Label5.Location = New System.Drawing.Point(2, 37)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 19)
-        Me.Label5.TabIndex = 133
-        Me.Label5.Text = "Tipo pala"
-        '
-        'DataBaseSWDataSet12
-        '
-        Me.DataBaseSWDataSet12.DataSetName = "DataBaseSWDataSet12"
-        Me.DataBaseSWDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TipoPalaBindingSource
-        '
-        Me.TipoPalaBindingSource.DataMember = "TipoPala"
-        Me.TipoPalaBindingSource.DataSource = Me.DataBaseSWDataSet12
-        '
         'TipoPalaTableAdapter
         '
         Me.TipoPalaTableAdapter.ClearBeforeFill = True
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.Guna2Panel2.Controls.Add(Me.Label22)
+        Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox1)
+        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.ShadowDecoration.Parent = Me.Guna2Panel2
+        Me.Guna2Panel2.Size = New System.Drawing.Size(1924, 1041)
+        Me.Guna2Panel2.TabIndex = 143
+        Me.Guna2Panel2.Visible = False
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Franklin Gothic Medium Cond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(754, 421)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(150, 37)
+        Me.Label22.TabIndex = 1
+        Me.Label22.Text = "LOADING..."
+        '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.Image = Global.VipDesignerUM.My.Resources.Resources.sw_icon
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(483, 89)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(593, 370)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 0
+        Me.Guna2PictureBox1.TabStop = False
         '
         'SW_interface
         '
@@ -944,6 +983,7 @@ Partial Class SW_interface
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1924, 1041)
+        Me.Controls.Add(Me.Guna2Panel2)
         Me.Controls.Add(Me.Guna2Button1)
         Me.Controls.Add(Me.Pan3)
         Me.Controls.Add(Me.Pan2)
@@ -963,6 +1003,8 @@ Partial Class SW_interface
         CType(Me.SerieVentolaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pan1.ResumeLayout(False)
         Me.Pan1.PerformLayout()
+        CType(Me.TipoPalaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataBaseSWDataSet12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pan2.ResumeLayout(False)
         Me.Pan2.PerformLayout()
         Me.Pan3.ResumeLayout(False)
@@ -970,8 +1012,9 @@ Partial Class SW_interface
         CType(Me.DataBaseSWDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBaseSWDataSet1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataBaseSWDataSet1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataBaseSWDataSet12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TipoPalaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel2.ResumeLayout(False)
+        Me.Guna2Panel2.PerformLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1039,4 +1082,7 @@ Partial Class SW_interface
     Friend WithEvents DataBaseSWDataSet12 As DataBaseSWDataSet12
     Friend WithEvents TipoPalaBindingSource As BindingSource
     Friend WithEvents TipoPalaTableAdapter As DataBaseSWDataSet12TableAdapters.TipoPalaTableAdapter
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

@@ -80,10 +80,10 @@
     <ApplicationIcon>VipStat.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5B8005166E3894F556FDA143822807063C9C463E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>43352A3FCCA14EA568A22129832C0449BCD2046E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>VipDesignerUM_4_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>VipDesignerUM_5_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -929,6 +929,7 @@
     <None Include="VipDesignerUM_1_TemporaryKey.pfx" />
     <None Include="VipDesignerUM_2_TemporaryKey.pfx" />
     <None Include="VipDesignerUM_4_TemporaryKey.pfx" />
+    <None Include="VipDesignerUM_5_TemporaryKey.pfx" />
     <None Include="VipDesignerUM_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

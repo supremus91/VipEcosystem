@@ -419,14 +419,19 @@ Public Class SW_interface
 
     Public Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
 
-        Dim SwOpen As SwOpenFile = New SwOpenFile()
+        'ATTIVA IL LOADING
+        Guna2Panel2.Visible = True  '------> ESEGUIRE IN PARALLELO
+        Guna2Panel2.BringToFront()  '------> ESEGUIRE IN PARALLELO
+        Label22.Text = "0% - Apertura SolidWorks"
+        Label22.Location = New System.Drawing.Point(650, 490)
+        Application.DoEvents()
 
+        Dim SwOpen As SwOpenFile = New SwOpenFile()
         Try
-            SwOpen.Main(Serie_motore, Serie_ventola, Diam_SW, Angolo_SW, Config_ventilatore, TipoPala, Profilo_ventola, Npale_ventola, Flusso, Pan3)
+            SwOpen.Main(Serie_motore, Serie_ventola, Diam_SW, Angolo_SW, Config_ventilatore, TipoPala, Profilo_ventola, Npale_ventola, Flusso, Pan3, Guna2Panel2, Label22)
         Catch ex As Exception
 
         End Try
-
 
     End Sub
 

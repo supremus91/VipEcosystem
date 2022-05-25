@@ -15,14 +15,14 @@ Public Class LeggiSwDbRaggera
 
 
 
-    Public Sub Main(Ventola, Npale, Motore)
+    Public Sub Main(Ventola, Npale, Motore, TipoVentola)
 
         Try
 
             Using cn As New OleDb.OleDbConnection(constring_RefExcel)
                 'provider to be used when working with access database
                 cn.Open()
-                Dim cmd As New OleDb.OleDbCommand("SELECT [Dnom], [CodiceSW] FROM Raggere WHERE SerieVentola = '" & Ventola & "' AND Npale = '" & Npale & "' AND Motore = '" & Motore & "'", cn)
+                Dim cmd As New OleDb.OleDbCommand("SELECT [Dnom], [CodiceSW] FROM Raggere WHERE SerieVentola = '" & Ventola & "' AND Npale = '" & Npale & "' AND Motore = '" & Motore & "' AND TipoVentola = '" & TipoVentola & "'", cn)
 
                 Dim myreader As OleDbDataReader
 

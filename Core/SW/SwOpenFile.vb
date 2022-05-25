@@ -13,7 +13,7 @@ Imports SolidWorks.Interop.sldworks
 
 Imports SolidWorks.Interop.swconst
 
-Imports Microsoft.Office.Interop.Excel
+'Imports Microsoft.Office.Interop.Excel
 
 
 'Imports System.Runtime.InteropServices
@@ -34,7 +34,12 @@ Public Class SwOpenFile
 
     Public swApp As SldWorks = CreateObject("SldWorks.Application")
 
-    Public Sub Main(Motore As String, Ventola As String, Diametro As String, Calettamento As String, Configurazione As String, TipoPala As String, TipoVentola As String, NumeroPale As String, Flusso As String, ByRef pan As Guna.UI2.WinForms.Guna2Panel)
+    Public Sub Main(Motore As String, Ventola As String, Diametro As String, Calettamento As String, Configurazione As String, TipoPala As String, TipoVentola As String,
+                    NumeroPale As String, Flusso As String, ByRef pan As Guna.UI2.WinForms.Guna2Panel, ByRef load As Guna.UI2.WinForms.Guna2Panel, ByRef lb As Label)
+
+
+
+        Dim percentuale As Integer = 0
 
         Lettura_RefExcel1()
 
@@ -48,7 +53,7 @@ Public Class SwOpenFile
                 diam_SW_star = Diam_SW(0) & Diam_SW(1) & Diam_SW(2)
             End If
 
-            swApp.Visible = True
+            swApp.Visible = False
 
             'Get the current working directory before opening the document
 
@@ -57,6 +62,10 @@ Public Class SwOpenFile
             Dim CodiceVentilatore As String = Motore & Ventola & " _._._-_._-_._-" & Configurazione & "-_._._" & NumeroPale & "_-" & Flusso
             Dim CodiceVentilatore1 As String = Motore & Ventola & " _._._-_._-_._-[" & Configurazione & "]-_._._" & NumeroPale & "_-" & Flusso
             Dim CodiceVentilatore2 As String = Motore & Ventola & " " & diam_SW_star & "-" & Calettamento & "-" & "_._" & "-" & Configurazione & "-" & "_._" & TipoVentola & NumeroPale & "._-" & Flusso
+
+            percentuale = percentuale + 10
+            lb.Text = percentuale & "% - Cerco nell'archivio " & CodiceVentilatore
+            Application.DoEvents()
 
             'Apertura della directory contenente l'assemblato
             doc = swApp.OpenDoc6(directory_SW_assemblati & Motore & Ventola & "\MODELLI AUTOMATICI\" & Configurazione & "\" & CodiceVentilatore & ".SLDASM", swDocumentTypes_e.swDocASSEMBLY, swOpenDocOptions_e.swOpenDocOptions_Silent, "", fileerror, filewarning)
@@ -67,12 +76,13 @@ Public Class SwOpenFile
 
 
             'Set the working directory to the document directory
-
             swApp.SetCurrentWorkingDirectory(Left(doc.GetPathName, InStrRev(doc.GetPathName, "\")))
-
-
             Debug.Print("Current working directory is now " & swApp.GetCurrentWorkingDirectory)
 
+
+            percentuale = percentuale + 20
+            lb.Text = percentuale & "% - Montaggio motore in " & CodiceVentilatore
+            Application.DoEvents()
 
             'Dim swDesTable As DesignTable
             'Dim nTotRow As Integer
@@ -108,17 +118,42 @@ Public Class SwOpenFile
 
             'oggetto che identifica la dimensione della raggera
             Dim LeggiRaggera As LeggiSwDbRaggera = New LeggiSwDbRaggera()
-            LeggiRaggera.Main(Ventola, NumeroPale, Motore)
+            LeggiRaggera.Main(Ventola, NumeroPale, Motore, TipoPala)
 
 
             Dim status As Boolean
             Dim docDocExt As ModelDocExtension
 
+
+
+
+
             docDocExt = doc.Extension
             'status = docDocExt.SelectByID2("063 M@RR _._._ -_._-_._-[M]-_._._7_-A.SLDASM", "CONFIGURATIONS", 0, 0, 0, False, 0, Nothing, 0)
             status = docDocExt.SelectByID2(diam_SW_star & " M@" & CodiceVentilatore1 & ".SLDASM", "CONFIGURATIONS", 0, 0, 0, False, 0, Nothing, 0)
             doc.ShowConfiguration2(diam_SW_star & " " & Configurazione)
-            doc.Extension.SelectByID2("PALE PER " & TipoPala & " " & Ventola & NumeroPale & " D" & SW_Raggera & "-" & SW_Code & "@" & CodiceVentilatore1, "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+
+
+            For i = 0 To 9
+                Try
+                    doc.Extension.SelectByID2("PALE PER " & TipoPala & " " & Ventola & NumeroPale & " D" & SW_Raggera & "-" & i & "@" & CodiceVentilatore1, "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+                    doc.EditUnsuppress2()
+
+                    Dim swComp As Component2
+                    swComp = doc.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+                    swComp.ReferencedConfiguration = diam_SW_star & " C" & Calettamento
+                    status = doc.EditRebuild3()
+                    doc.ClearSelection2(True)
+                Catch ex As Exception
+
+                End Try
+
+
+                percentuale = percentuale + 5
+                lb.Text = percentuale & "% - Montaggio ventola in " & CodiceVentilatore
+                Application.DoEvents()
+
+            Next
 
 
             '' Select a sketch and hide it
@@ -126,17 +161,22 @@ Public Class SwOpenFile
             ''doc.FeatureManager.HideBodies()
             'doc.EditSuppress2()
 
-            Dim swComp As Component2
-            swComp = doc.SelectionManager.GetSelectedObjectsComponent4(1, -1)
-            swComp.ReferencedConfiguration = diam_SW_star & " C" & Calettamento
-            status = doc.EditRebuild3()
-            doc.ClearSelection2(True)
+            'Dim swComp As Component2
+            'swComp = doc.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+            'swComp.ReferencedConfiguration = diam_SW_star & " C" & Calettamento
+            'status = doc.EditRebuild3()
+            'doc.ClearSelection2(True)
 
 
             Dim chx_count As Integer = 0
             For Each item As Control In pan.Controls
 
+                percentuale = percentuale + 3
+                lb.Text = percentuale & "% - Montaggio accessori in " & CodiceVentilatore
+                Application.DoEvents()
+
                 If item.GetType Is GetType(Guna.UI2.WinForms.Guna2CheckBox) Then
+
 
 
                     Dim CheckX As Guna.UI2.WinForms.Guna2CheckBox
@@ -157,9 +197,6 @@ Public Class SwOpenFile
 
             Next
 
-
-
-
             Dim saveFileDialog1 As SaveFileDialog = New SaveFileDialog()
             saveFileDialog1.FilterIndex = 1
             saveFileDialog1.RestoreDirectory = True
@@ -171,6 +208,9 @@ Public Class SwOpenFile
             saveFileDialog1.AddExtension = True
 
 
+            percentuale = 99
+            lb.Text = percentuale & "% - Salvataggio " & CodiceVentilatore
+            Application.DoEvents()
 
 
             If saveFileDialog1.ShowDialog() = DialogResult.OK Then
@@ -182,11 +222,6 @@ Public Class SwOpenFile
                 End If
 
             End If
-
-
-
-
-
 
             'status = doc.SaveAs3("C:\Users\" & nome_macchina & "\" & "Desktop" & "\" & CodiceVentilatore2 & ".STEP", 0, 2)
 
@@ -236,7 +271,26 @@ Public Class SwOpenFile
                 End If
             Next
 
+
+            'ATTIVA IL LOADING
+            load.Visible = False  '------> ESEGUIRE IN PARALLELO
+            load.SendToBack()  '------> ESEGUIRE IN PARALLELO
+            lb.Text = "LOADING..."
+            lb.Location = New System.Drawing.Point(738, 490)
+
+            Application.DoEvents()
+
+
         End Try
+
+        'ATTIVA IL LOADING
+        load.Visible = False  '------> ESEGUIRE IN PARALLELO
+        load.SendToBack()  '------> ESEGUIRE IN PARALLELO
+        lb.Text = "LOADING..."
+        lb.Location = New System.Drawing.Point(738, 490)
+
+        Application.DoEvents()
+
 
 
     End Sub
